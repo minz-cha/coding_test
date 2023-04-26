@@ -1,16 +1,8 @@
 def solution(left, right):
     answer = 0
-              
-    for i in range(left, right+1):
-        count = 0 #약수의 개수
-        
-        for j in range(1, i+1):
-            if i % j == 0: #j가 i의 약수일때
-                count += 1
-
-        if count % 2 == 0:
-            answer += i
-        else :
+    for i in range(left,right+1):
+        if int(i**0.5)==i**0.5: #제곱수면 약수의 개수가 홀수
             answer -= i
-            
+        else:
+            answer += i
     return answer
