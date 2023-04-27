@@ -1,5 +1,4 @@
 def solution(s):
-    answer = []
     cnt_0, count = 0, 0
     
     while s != '1':
